@@ -1,6 +1,6 @@
 import 'package:chatgpt_flutter_case/core/constants/constants_shelf.dart';
 import 'package:chatgpt_flutter_case/core/services/locale_services/navigation_service.dart';
-import 'package:chatgpt_flutter_case/views/chat_history_screen/chat_history.dart';
+import 'package:chatgpt_flutter_case/env/env.dart';
 import 'package:chatgpt_flutter_case/views/splash_screen.dart';
 import 'package:dart_openai/openai.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,7 @@ import 'core/locator.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupLocators();
-  OpenAI.apiKey = StringConstants.apiKey;
+  OpenAI.apiKey = Env.openAIApiKey;
   await GVariables.spService.init();
   var themeProvider = core.ThemeProvider.instance;
   await themeProvider.fetchLocale();
