@@ -2,6 +2,8 @@
 
 # Files and directories created by pub
 .dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
 .packages
 build/
 # If you're building an application, you may want to check-in your pubspec.lock
@@ -19,3 +21,5 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+*.env
+*env.g.dart
